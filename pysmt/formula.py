@@ -255,6 +255,12 @@ class FormulaManager(object):
             val = base.constant_value() ** exponent.constant_value()
             return self.Real(val)
         return self.create_node(node_type=op.POW, args=(base, exponent))
+    
+    def Abs(self, expression):
+        """ Take the absolute value of expression.
+        """
+        
+        return self.create_node(node_type=op.ABS, args=(expression,))
 
     def Div(self, left, right):
         """ Creates an expression of the form: left / right """

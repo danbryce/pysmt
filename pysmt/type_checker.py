@@ -328,6 +328,12 @@ class SimpleTypeChecker(walkers.DagWalker):
             return None
         return REAL
 
+    def walk_abs(self, formula, args, **kwargs):
+        if args[0].is_int_type():
+            return INT
+        else:
+            return REAL
+
 # EOC SimpleTypeChecker
 
 
