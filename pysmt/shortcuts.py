@@ -198,6 +198,9 @@ def Pow(left, right):
     r""".. math:: l ^ r"""
     return get_env().formula_manager.Pow(left, right)
 
+def Abs(expr):
+    r""".. math:: | expr |"""
+    return get_env().formula_manager.Abs(expr)
 
 def Div(left, right):
     r""".. math:: \frac{l}{r}"""

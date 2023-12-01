@@ -296,6 +296,7 @@ class HRPrinter(TreeWalker):
     def walk_times(self, formula): return self.walk_nary(formula, " * ")
     def walk_div(self, formula): return self.walk_nary(formula, " / ")
     def walk_pow(self, formula): return self.walk_nary(formula, " ^ ")
+    def walk_abs(self, formula): return self.walk_nary(formula, " abs ")
     def walk_iff(self, formula): return self.walk_nary(formula, " <-> ")
     def walk_implies(self, formula): return self.walk_nary(formula, " -> ")
     def walk_minus(self, formula): return self.walk_nary(formula, " - ")
